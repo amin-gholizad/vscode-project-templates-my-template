@@ -45,7 +45,7 @@ run: all
 	$(call PATH_CALL,$(TARGET))
 
 clean:
-	$(call RM_CALL,$(TARGET) $(CPP_DEPENDS) $(CPP_OBJECTS) )
+	$(call RM_CALL,$(TARGET) $(BUILD)/*.cpp.d $(BUILD)/*.cpp.o)
 
 # include dependency rules
 -include $(CPP_DEPENDS)
